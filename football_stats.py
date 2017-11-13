@@ -14,7 +14,7 @@ def td_scraper():
         url = "https://www.cbssports.com/nfl/stats/playersort/nfl/year-2017-season-regular-category-touchdowns"
         page = urllib2.urlopen(url)
         soup = BeautifulSoup(page, "lxml")
-        table = soup.find_all("table", attrs={"class":"data"})[0].find_all('tr', attrs={"valign":"top"})
+        table = soup.find_all("table")[0].find_all('tr', attrs={"valign":"top"})
 
         #Creates lists to save the data that will be parsed from the soup object
         name_list = []
