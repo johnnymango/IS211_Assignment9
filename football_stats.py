@@ -38,7 +38,7 @@ def td_scraper():
 
         #Creates a dataframe from the lists and presents the top 20 players
         df1 = pd.DataFrame(dict(Player=name_list, Team=team_list, TouchDowns=td_list, Position=position_list ))
-        print df1.head(20)
+        print df1.head(20).to_string(index=False)
 
 if __name__ == "__main__":
     td_scraper()
